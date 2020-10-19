@@ -1,7 +1,7 @@
 # Transform GraphQL
 
-[![npm](https://img.shields.io/npm/v/graphql-zeus.svg?style=flat-square)](https://www.npmjs.com/package/transform-graphql)  [![npm downloads](https://img.shields.io/npm/dt/transform-graphql.svg?style=flat-square)](https://www.npmjs.com/package/transform-graphql)
-[![npm downloads](https://img.shields.io/github/workflow/status/graphql-editor/graphql-zeus/master.svg?style=flat-square)](https://www.npmjs.com/package/transform-graphql)
+[![npm](https://img.shields.io/npm/v/transform-graphql.svg?style=flat-square)](https://www.npmjs.com/package/transform-graphql)  [![npm downloads](https://img.shields.io/npm/dt/transform-graphql.svg?style=flat-square)](https://www.npmjs.com/package/transform-graphql)
+[![npm downloads](https://img.shields.io/github/workflow/status/graphql-editor/transform-graphql/release.svg?style=flat-square)](https://www.npmjs.com/package/transform-graphql)
 
 
 We use GraphQL transformers. Examples are Graphback, Dgraph, AWS Amplify. This library provides function that given any GraphQL schema creates new GraphQL schemas basing on transformer functions.
