@@ -6,7 +6,27 @@
 
 We use GraphQL transformers. Examples are Graphback, Dgraph, AWS Amplify. This library provides function that given any GraphQL schema creates new GraphQL schemas basing on transformer functions.
 
+## Installation
+
+```sh
+npm i transform-graphql
+```
+
 ## How it works
+
+Provide original schema with your transformer directives and an array of transformer functions defined by `TransformerDef` type
+
+```ts
+
+import { TransformGraphQLSchema } from 'transform-graphql';
+
+const transformedSchema = TransformGraphQLSchema({ 
+    schema: inputSchema, 
+    transformers: [transformerCRUD] 
+});
+
+
+```
 
 This short example simply shows what transform GraphQL is about:
 
@@ -94,6 +114,19 @@ schema{
 And the transformer code should look like this
 
 ```ts
+const inputSchema = `
+type Post @model{
+    name: String!
+    content: String!
+    createdAt: String!
+}
+
+type Query{
+    version:String
+}
+type Mutation{
+    version:String
+}`
 const transformerCRUD: TransformerDef = {
   transformer: ({ field, operations }) => {
     if (!field.args) {
@@ -136,6 +169,13 @@ const transformerCRUD: TransformerDef = {
   },
   directiveName: 'model',
 };
+const transformedSchema = TransformGraphQLSchema({ schema: GraphQLTransform, transformers: [transformerCRUD] });
+//transfomed schema should look like in the example
 
 ```
+
+## Roadmap
+
+- provide CLI
+- provide examples
 
