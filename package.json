@@ -1,0 +1,44 @@
+{
+  "name": "transform-graphql",
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "description": "Generate GraphQL Schema from another schema with directives",
+  "homepage": "https://graphqleditor.com",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "ttsc -p tsconfig.build.json",
+    "start": "ttsc -p tsconfig.build.json --watch",
+    "test": "jest",
+    "lint": "ttsc && eslint \"./src/**/*.{ts,js}\" --quiet --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graphql-editor/transform-graphql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/graphql-editor/transform-graphql.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.11.5",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^25.2.4",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.3.0",
+    "ts-node": "^9.0.0",
+    "ttypescript": "^1.5.11",
+    "typescript": "^4.0.3",
+    "typescript-transform-paths": "^2.0.0"
+  },
+  "dependencies": {
+    "graphql-zeus": "^2.8.5"
+  }
+}
