@@ -1,6 +1,6 @@
 {
   "name": "transform-graphql",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "license": "MIT",
   "description": "Generate GraphQL Schema from another schema with directives",

@@ -36,7 +36,7 @@ export const TransformGraphQLSchema = ({ schema, transformers }: TransformSchema
   const addSchema: string[] = [];
   transformers.forEach((transformer) => {
     const { nodes } = initialTree;
-    nodes.forEach((n) => {
+    const checkNode = (n: ParserField) => {
       if (n.directives?.find((d) => d.name === transformer.directiveName)) {
         addSchema.push(
           transformer.transformer({
@@ -48,9 +48,12 @@ export const TransformGraphQLSchema = ({ schema, transformers }: TransformSchema
           }),
         );
       }
-    });
+      if (n.args) {
+        n.args.forEach((a) => checkNode(a));
+      }
+    };
+    nodes.forEach(checkNode);
   });
   const joinedSchemas = addSchema.join('\n').concat(schema);
-  console.log(joinedSchemas);
   return TreeToGraphQL.parse(Parser.parseAddExtensions(joinedSchemas));
 };
