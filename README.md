@@ -170,7 +170,7 @@ const transformerCRUD: TransformerDef = {
   directiveName: 'model',
 };
 const transformedSchema = TransformGraphQLSchema({ schema: GraphQLTransform, transformers: [transformerCRUD] });
-//transfomed schema should look like in the example
+//transformed schema should look like in the example
 
 ```
 
