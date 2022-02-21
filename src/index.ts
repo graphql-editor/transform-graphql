@@ -1,4 +1,4 @@
-import { OperationType, Parser, ParserField, ParserTree, TreeToGraphQL } from 'graphql-zeus';
+import { OperationType, Parser, ParserField, ParserTree, TreeToGraphQL } from 'graphql-js-tree';
 
 export interface TransformerFunction {
   (props: {

@@ -1,5 +1,5 @@
 import { TransformerDef, TransformGraphQLSchema } from '../';
-import { TreeToGraphQL } from 'graphql-zeus';
+import { TreeToGraphQL } from 'graphql-js-tree';
 
 const GraphQLTransform = `
     type Post implements Nameable @model{
